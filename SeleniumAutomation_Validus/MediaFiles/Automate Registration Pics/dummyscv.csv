@@ -1,0 +1,2 @@
+Invoice_No__c,Original_Invoice_Amount__c,Currency__c,Invoice_Amount__c,Invoice_Tenor__c,Invoice_Date__c,
+272,5100,INR,100,2,12/13/2018,(mm-dd-yyyy)
