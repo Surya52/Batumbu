@@ -53,7 +53,7 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 		 	 
 			//click(validussmokelocators.validusMainpageLogin);
 			/*swtichToChildTab();
-			switchwindow(1);
+		
 			*/
 			js_type(foreigbusinessloc.emailIDInvestor, pdfResultReport.testData.get("EmailIDInvestor"), "username");
 			set(foreigbusinessloc.passwordInvestor, pdfResultReport.testData.get("PasswordInvestor"));
@@ -112,9 +112,8 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 			 click(loc);
 			 Thread.sleep(4000);	
 			Screen s=new Screen();
-			s.type("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\text.png", "C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\dummy-pdf_2.pdf");
-			s.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenButton.png");
-		
+			s.type("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\text.png", "C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\dummy-pdf_2.pdf");
+			s.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenButton.png");
 			
 		}catch(Exception e) {
 			System.out.println("Unable to upload the file");
@@ -150,7 +149,7 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 		try {
 			Thread.sleep(2000);
 			
-			screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+			screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
 			waitForObj(2000);
 			switchwindow(1);
 			ThreadLocalWebdriver.getDriver().get("https://test.salesforce.com/");
@@ -170,7 +169,7 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 		
 		try {
 		 
-			screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+			screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
 			Thread.sleep(5000);
 		try {
 			switchwindow(2);
@@ -191,8 +190,8 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 		click(foreigbusinessloc.emailNext);
 		Thread.sleep(4000);
 		
-		screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\mailmenu.png");
-		screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\MailIcon.png");
+		screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\mailmenu.png");
+		screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\MailIcon.png");
 		
 		set(foreigbusinessloc.gmailSearch, "noreply@salesforce.com");
 	 	
@@ -226,10 +225,7 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 				 otp = otps.trim();
 				System.out.println(otp);
 				Thread.sleep(5000);
-		 	//JSClick(salesforcelocators.gmailDelete, "Delete");
-				//ThreadLocalWebdriver.getDriver().findElement(By.xpath("//div[@class='T-I J-J5-Ji nX T-I-ax7 T-I-Js-Gs  W6eDmd']")).click();
-				//s.click("C:\\Automation\\Workspace\\SeleniumAutomation_Validus\\MediaFiles\\Delete.PNG");
-				Thread.sleep(2000);
+		 	 	Thread.sleep(2000);
 			}
 	  	}
 	 	/*
@@ -269,20 +265,21 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 		
 	 
 		
-		screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\DeleteMaiil.png");
+		screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\DeleteMaiil.png");
+		
 		Actions a = new Actions(ThreadLocalWebdriver.getDriver());
 		a.sendKeys(Keys.F5).build().perform();
 		Robot r=new Robot();
 		r.keyPress(KeyEvent.VK_F5);
 		r.keyRelease(KeyEvent.VK_F5);
-		
+		Thread.sleep(4000);
 		ThreadLocalWebdriver.getDriver().close();
 		Thread.sleep(4000);
 		try {
 			 switchwindow(1);
 			Thread.sleep(2000);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			 
 			e.printStackTrace();
 		}
 		
@@ -306,8 +303,7 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 					click(foreigbusinessloc.UnregisteredUser);
 					 String str=	ThreadLocalWebdriver.getDriver().findElement(foreigbusinessloc.UnRegisterText).getText();
 				System.out.println("Total No Of Usrs Are"+"  "+str);
-					 
-				
+				 
 				
 				   String[] s2 = str.split("\n");
 					System.out.println("No Of Unregistered Users Are"+s2.length);
@@ -352,7 +348,7 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 								click(foreigbusinessloc.Mailverification);
 								
 							 	waitForObj(1000);
-								  screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\LeaveButton.png");
+								  screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\LeaveButton.png");
 								Thread.sleep(20000);
 								 swtichToChildTab();	
 								click(foreigbusinessloc.LoginKiPlatform);
@@ -360,21 +356,13 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 																	        	
 					        }else {
 					        
-					        screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\BackBUtton.png");
+					        screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\BackBUtton.png");
 					        }
 							
 					
 						}
 					}
-					
-				
-				
-				
-				
-				
-				
-				
-				pdfResultReport.addStepDetails("Salesforce mobile and email verification", "User should able to verify mobile and email successfully",
+					 pdfResultReport.addStepDetails("Salesforce mobile and email verification", "User should able to verify mobile and email successfully",
 							"Successfully verified the email and mobile from the salesforce application" + " ", "Pass", "Y");
 				} 
 		catch (Exception e3) {
@@ -578,9 +566,9 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 			uploadFile(institutionLoc.Uploaffile6);
 			waitForObj(15000);
 			uploadFile(institutionLoc.Uploaffile7);
+			waitForObj(10000);
 			
-			
-			click(institutionLoc.Agree1);
+			JSClick(institutionLoc.Agree1, "Terms Conditions 1");
 			click(institutionLoc.Agree2);
 			click(institutionLoc.Agree3);
 			click(institutionLoc.Agree4);
@@ -600,9 +588,14 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 public void batumbuAdminApproval() throws Throwable{
 		
 		try{
+			
+			
 			waitForObj(2000);
-			switchwindow(2);
-			ThreadLocalWebdriver.getDriver().get("https://batumbu.id/BatumbuAdmin/public/ ");
+			
+			
+			screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+			switchwindow(1);
+			ThreadLocalWebdriver.getDriver().get("http://portal.batumbu.id/BatumbuAdmin/public/");
 			
 			set(institutionLoc.AdminMail, "portaladmin@batumbu.id");
 			set(institutionLoc.AdminPassword, "Admin123");
@@ -777,29 +770,28 @@ public void salesforceApproval() throws Throwable {
 	}
 	}
 	
-public void Investorfund() throws Exception {
+
+public void bankDetails() throws Throwable {
 	
 	try {
-	/*click(registerasInvestorlocators.bank);
+	
+		/*click(registerasInvestorlocators.bank);
 	click(registerasInvestorlocators.edit);
 	set(registerasInvestorlocators.AccountOwner, pdfResultReport.testData.get("Account Owner"));
-	*/click(foreigbusinessloc.bank);
-		set(foreigbusinessloc.AccountNumber, pdfResultReport.testData.get("Account Number"));
+	*/
+	switchwindow(1);
+	js_Select(foreigbusinessloc.AccountOwner, pdfResultReport.testData.get("ShareHoldername"),"Account Number");
+	set(foreigbusinessloc.AccountNumber, pdfResultReport.testData.get("Account Number"));
 	set(foreigbusinessloc.BankName, pdfResultReport.testData.get("Bank Name"));
 	set(foreigbusinessloc.BranchCode, pdfResultReport.testData.get("Branch Code"));
 	click(foreigbusinessloc.submitbank);
 
-	String str = text(foreigbusinessloc.investorstatus);
-	System.out.println(str);
-/*	click(registerasInvestorlocators.platform);
-	click(registerasInvestorlocators.allLivefacilities);
-	String strn = text(registerasInvestorlocators.availableFunds);
-	System.out.println(strn);
-*/	waitForObj(3000);
+	//screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\KELUAR.png");
+	 
+	 
 	
+    pdfResultReport.addStepDetails("Investor bank details","User should able to do Enter bank Details","Successfully able to Enter bank Deetails" + " ","Pass", "Y");
 	
-pdfResultReport.addStepDetails("Investorfund","User should able to do fund","Successfully able to fund" + " ","Pass", "Y");
-	switchwindow(0);
 }
 catch(Exception e) {
 	log.fatal("Unable to Homelogin"+e.getMessage());
@@ -936,6 +928,9 @@ public void salesforcefund() throws Exception {
 	
 	pdfResultReport.addStepDetails("salesforcefund", "User should able to fund the application successfully",
 			"Successfully funded to the application" + " ", "Pass", "Y");
+	
+	switchwindow(1);
+	
 } catch (Exception e) {
 	log.fatal("Unable to Homelogin" + e.getMessage());
 	pdfResultReport.addStepDetails("salesforcefund", "User is not able to fund to the application",
@@ -946,7 +941,7 @@ public void salesforcefund() throws Exception {
 public void investorfunddetails() throws Exception {
 	
 	try {
-		switchwindow(0);
+		switchwindow(1);
 		Actions a = new Actions(ThreadLocalWebdriver.getDriver());
 		a.sendKeys(Keys.F5).build().perform();
 		Robot r=new Robot();

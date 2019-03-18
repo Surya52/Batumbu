@@ -120,7 +120,7 @@ public class ForeignBusiness_Entity_Locators {
 		    public By gmailSearch=By.xpath("//input[@aria-label='Search mail']");
 		    public By gmailSearchButton = By.xpath("//button[@aria-label='Search Mail']");
 		    public By gmailMail = By.xpath("(//span[text()='Sandbox: Verify your identity in Salesforce'])[4]");
-		    public By gmailDelete = By.xpath("//div[@class='T-I J-J5-Ji nX T-I-ax7 T-I-Js-Gs  W6eDmd']");
+		    public By gmailDelete = By.xpath("(//div[@class='asa'])[24]");
 			
 		    public By UnregisteredUser = By.xpath("//a[contains(text(),'Unregistered Users')]");
 		    public By FirstApplication = By.xpath("(//th[@class=' dataCell  '])[1]");
@@ -142,10 +142,12 @@ public class ForeignBusiness_Entity_Locators {
 			public By platform = By.xpath("//a[@id='tog-menu-a']"); 
 			public By bank = By.xpath("//a[contains(text(),'Bank')]");
 			public By edit = By.xpath("//button[@id='Edit']");
-			public By AccountOwner = By.xpath("//input[@id='NameAsPerBank']");
+			public By AccountOwner = By.xpath("//select[@id='NameAsPerBank']");
 			public By BankName = By.xpath("//input[@id='BankName']");
 			public By AccountNumber = By.xpath("//input[@id='BankAccountNumber']");
 			public By submitbank = By.xpath("//button[@id='Bankdetailssubmitbutton']");
+			public By Keluar		= By.xpath("(//a[text()='Keluar'])[1]");
+			
 			public By allLivefacilities = By.xpath("//a[contains(text(),' Penawaran Pinjaman saat ini')]");
 			public By availableFunds = By.xpath("//div[@class='availableFunds']"); 
 			public By BranchCode = By.xpath("//input[@id='BranchCode']");

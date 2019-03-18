@@ -11,8 +11,7 @@ public class Batumbu_Investor_IndividualForeigners extends BaseClass_Web{
  
 	  
 	public Batumbu_IndividualForeign_Components individualforeigncomponents =new Batumbu_IndividualForeign_Components(pdfResultReport);
-
-	
+ 
 	
 	 
 	@Parameters("TestcaseNo")
