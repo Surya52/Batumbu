@@ -26,18 +26,19 @@ public class Batumbu_Investor_IndividualForeigners extends BaseClass_Web{
 	}
 	 
 	  individualforeigncomponents.openURL();
-	  individualforeigncomponents.CreateAccount();
+	/*  individualforeigncomponents.CreateAccount();
 	  individualforeigncomponents.salesforceIntegrationLogin();
 	  individualforeigncomponents.gmailOTP();
 	  individualforeigncomponents.salesforceOTP();	  
-	  individualforeigncomponents.login();
+	*/  individualforeigncomponents.login();
 	  individualforeigncomponents.navigatetoIndividualForeignCitizens();
-	  individualforeigncomponents.IndividualForeignCitizens();  
+	  individualforeigncomponents.IndividualForeignCitizens(); 
+	  individualforeigncomponents.login();
 	  individualforeigncomponents.batumbuAdminApproval();
 	
 	  // individualforeigncomponents.ESignatureVerification();
 	  
-	  individualforeigncomponents.login();
+	 
 	  individualforeigncomponents.salesforcefund();
 	  individualforeigncomponents.login();
 	  individualforeigncomponents.investorfunddetails();

@@ -55,7 +55,7 @@ import com.objectRepository.ForeignBusiness_Entity_Locators;
 				/*swtichToChildTab();
 				switchwindow(1);
 				*/ 
-				click(individualforeignlocators.validusMainpageLogin);
+				//click(individualforeignlocators.validusMainpageLogin);
 				js_type(individualforeignlocators.emailIDInvestor, pdfResultReport.testData.get("EmailIDInvestor"), "username");
 				set(individualforeignlocators.passwordInvestor, pdfResultReport.testData.get("PasswordInvestor"));
 			 
@@ -104,12 +104,10 @@ import com.objectRepository.ForeignBusiness_Entity_Locators;
 		public void uploadFile(By loc) {
 			try {
 				 click(loc);
-				 Thread.sleep(5000);
+				 Thread.sleep(3000);
 				Screen s=new Screen();
-				s.type("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\text.png", "C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\dummy-pdf_2.pdf");
-				s.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenButton.png");
-			
-				 	
+				s.type("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\text.png", "C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\dummy-pdf_2.pdf");
+				s.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenButton.png"); 	
 			}catch(Exception e) {
 				System.out.println("Unable to upload the file");
 			}
@@ -141,7 +139,7 @@ import com.objectRepository.ForeignBusiness_Entity_Locators;
 
 			try {
 				Thread.sleep(2000);
-			 	screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+			 	screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
 				waitForObj(2000);
 				switchwindow(1);
 				ThreadLocalWebdriver.getDriver().get("https://test.salesforce.com/");
@@ -161,7 +159,7 @@ import com.objectRepository.ForeignBusiness_Entity_Locators;
 			
 			try {
 				
-			screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+			screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
 			
 			Thread.sleep(5000);
 			
@@ -185,9 +183,9 @@ import com.objectRepository.ForeignBusiness_Entity_Locators;
 			waitForObj(4000);
 			//js_type(By.xpath("//input[@id='gbqfq']"), "noreply@salesforce.com", "search");
 			 
-			screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\mailmenu.png");
+			screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\mailmenu.png");
 			 waitForObj(2000);
-			 screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\MailIcon.png");
+			 screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\DeleteMaiil.png");
 			
 			set(individualforeignlocators.gmailSearch, "noreply@salesforce.com");
 			click(individualforeignlocators.gmailSearchButton);
@@ -275,6 +273,7 @@ import com.objectRepository.ForeignBusiness_Entity_Locators;
 				 waitForObj(5000);
 				 String mailtext1 = ThreadLocalWebdriver.getDriver().findElement(individualforeignlocators.Maildidtext).getText();
 				 waitForObj(5000);  
+				
 				 if(mailtext1.equals(pdfResultReport.testData.get("EmailIDInvestor"))){
 				 Thread.sleep(3000);
 				 String optMsg = ThreadLocalWebdriver.getDriver().findElement(By.xpath("//*[@id='00NN00000039a68_ileinner']")).getText();
@@ -296,13 +295,13 @@ import com.objectRepository.ForeignBusiness_Entity_Locators;
 					waitForObj(3000);
 					click(individualforeignlocators.Mailverification);
 					waitForObj(1000);
-					screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\LeaveButton.png");
+					screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\LeaveButton.png");
 				 	Thread.sleep(20000);
 					swtichToChildTab();	
 					click(individualforeignlocators.LoginKiPlatform);
 					 break;	
 					  }else {
-					 screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\BackBUtton.png");
+					 screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\BackBUtton.png");
 					   }
 						}
 					}
@@ -346,7 +345,7 @@ import com.objectRepository.ForeignBusiness_Entity_Locators;
 				
 				waitForObj(2000);
 				 
-				  set(individualforeignlocators.Networthprevious, pdfResultReport.testData.get("Annual Revenue Previous year"));
+				  js_type(individualforeignlocators.Networthprevious, pdfResultReport.testData.get("Annual Revenue latest year"),"Net Profi or Loass Previous Year");
 				set(individualforeignlocators.NetwothCurrentyear, pdfResultReport.testData.get("Annual Revenue latest year"));
 				//select(individualforeignlocators.Source, pdfResultReport.testData.get("Source"));
 			   	
@@ -382,10 +381,8 @@ import com.objectRepository.ForeignBusiness_Entity_Locators;
  			  	pageDown();
 				click(individualforeignlocators.submitbank);
 				waitForObj(5000);
-				 String str = ThreadLocalWebdriver.getDriver().findElement(By.xpath("//h3[@class='profile-ban-txt']")).getText();
-					System.out.println(str);
-				
-			    screenclick("C:\\Users\\Mani\\Desktop\\Automate Registration Pics\\KELUAR.png");
+				 
+			    screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\KELUAR.png");
 				 
 				
 				  waitForObj(3000);
@@ -406,7 +403,7 @@ import com.objectRepository.ForeignBusiness_Entity_Locators;
 	
 	//*[@id="example1"]/tbody/tr[1]/td[2]
 	//*[@id="example1"]/tbody/tr[1]/td[3] 
-		 	screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+		 	screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
 			waitForObj(2000);
 			switchwindow(2);
 			ThreadLocalWebdriver.getDriver().get("https://batumbu.id/BatumbuAdmin/public/ ");
