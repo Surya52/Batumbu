@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="366646" started-at="2019-03-19T06:27:03Z" finished-at="2019-03-19T06:33:10Z">
+  <suite name="Suite" duration-ms="679623" started-at="2019-03-19T08:34:13Z" finished-at="2019-03-19T08:45:32Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="366646" started-at="2019-03-19T06:27:03Z" finished-at="2019-03-19T06:33:10Z">
+    <test name="Test" duration-ms="679623" started-at="2019-03-19T08:34:13Z" finished-at="2019-03-19T08:45:32Z">
       <class name="com.testScripts_Indonesia.Batumbu_RegisterasaSME">
-        <test-method status="PASS" signature="setUpSuiteDetails(org.testng.ITestContext)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="setUpSuiteDetails" is-config="true" duration-ms="194" started-at="2019-03-19T06:27:03Z" finished-at="2019-03-19T06:27:03Z">
+        <test-method status="PASS" signature="setUpSuiteDetails(org.testng.ITestContext)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="setUpSuiteDetails" is-config="true" duration-ms="180" started-at="2019-03-19T08:34:13Z" finished-at="2019-03-19T08:34:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@579dde54]]>
+                <![CDATA[org.testng.TestRunner@1acd952e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpSuiteDetails -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="BeforeClass" is-config="true" duration-ms="3015" started-at="2019-03-19T06:27:03Z" finished-at="2019-03-19T06:27:06Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="BeforeClass" is-config="true" duration-ms="3013" started-at="2019-03-19T08:34:13Z" finished-at="2019-03-19T08:34:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="f(java.lang.String)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="f" duration-ms="360221" started-at="2019-03-19T06:27:06Z" description="Scenario:1 - Test the functionality of Consumer with valid flow" finished-at="2019-03-19T06:33:06Z">
+        <test-method status="PASS" signature="f(java.lang.String)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="f" duration-ms="673234" started-at="2019-03-19T08:34:16Z" description="Scenario:1 - Test the functionality of Consumer with valid flow" finished-at="2019-03-19T08:45:29Z">
           <params>
             <param index="0">
               <value>
@@ -33,7 +33,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="captureDesc(java.lang.reflect.Method)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="captureDesc" is-config="true" duration-ms="0" started-at="2019-03-19T06:27:06Z" finished-at="2019-03-19T06:27:06Z">
+        <test-method status="PASS" signature="captureDesc(java.lang.reflect.Method)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="captureDesc" is-config="true" duration-ms="0" started-at="2019-03-19T08:34:16Z" finished-at="2019-03-19T08:34:16Z">
           <params>
             <param index="0">
               <value>
@@ -44,11 +44,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureDesc -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="afterClass" is-config="true" duration-ms="1381" started-at="2019-03-19T06:33:08Z" finished-at="2019-03-19T06:33:10Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="afterClass" is-config="true" duration-ms="1348" started-at="2019-03-19T08:45:31Z" finished-at="2019-03-19T08:45:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="afterSuite" is-config="true" duration-ms="21" started-at="2019-03-19T06:33:10Z" finished-at="2019-03-19T06:33:10Z">
+        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="afterSuite" is-config="true" duration-ms="18" started-at="2019-03-19T08:45:33Z" finished-at="2019-03-19T08:45:33Z">
           <exception class="java.lang.NoClassDefFoundError">
             <message>
               <![CDATA[com/sun/mail/util/MailLogger]]>

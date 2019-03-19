@@ -41,7 +41,7 @@ public class Batumbu_RegisterasaSME extends BaseClass_Web{
 		borrowercomponents.batumbuAdminVerifyDocuments();
 		borrowercomponents.batumbuAdminApproval();
 		borrowercomponents.batumbuAdminApproveLoan();
-		   
+	 	   
 	
 	}
 }

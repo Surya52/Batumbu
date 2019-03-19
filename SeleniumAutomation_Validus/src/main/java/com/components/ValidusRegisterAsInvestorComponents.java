@@ -1051,6 +1051,8 @@ pdfResultReport.addStepDetails("Investorfund","User should able to do fund","Suc
 			waitForObj(10000);
 			click(smelocators.masuk);
 
+			waitForObj(5000);			
+			screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\SmeExit.png");
 		}catch(Exception e) {
 			 
 			log.fatal("Unable to Submit Loan" + e.getMessage());
@@ -1136,7 +1138,7 @@ public void batumbuAdminApproveLoan() throws Throwable {
 	try{
 	 	 	waitForObj(2000);
 		/*Screen S = new Screen();
-		S.click("C:\\Users\\user\\git\Batumbu\SeleniumAutomation_Validus\Media\OpenButton.png");
+		S.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenButton.png");
 	switchwindow(1);
 	ThreadLocalWebdriver.getDriver().get("http://149.129.218.139/BatumbuAdmin/public/");
  */
@@ -1153,7 +1155,16 @@ public void batumbuAdminApproveLoan() throws Throwable {
 		waitForObj(2000);
 		click(smelocators.ViewDetailsLender);
 		click(smelocators.Application);
+		
 		click(smelocators.ViewDetailsLender);
+		
+		waitForObj(5000);
+		Actions a = new Actions(ThreadLocalWebdriver.getDriver());
+		a.sendKeys(Keys.F5).build().perform();
+		Robot r=new Robot();
+		r.keyPress(KeyEvent.VK_F5);
+		r.keyRelease(KeyEvent.VK_F5);
+		
 		
 		click(smelocators.LoanDocuments);
 		waitForObj(3000);
@@ -1185,7 +1196,7 @@ public void batumbuAdminApproveLoan() throws Throwable {
 	    
 	    waitForObj(4000);
 	    click(smelocators.UploadPromisory);
-	    waitForObj(5000);
+	     waitForObj(5000);
 	    JSClick(smelocators.ApproveLoan , "Approve Loan");
 	     
     waitForObj(4000);
