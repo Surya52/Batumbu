@@ -11,7 +11,8 @@ import com.components.ValidusSmoke_Components;
 public class Batumbu_Foreign_Legal_Entities extends BaseClass_Web{
 
 	public Batumbu_Investor_Foreign_Legal_Entity_Components  foreignlegalcomponents = new Batumbu_Investor_Foreign_Legal_Entity_Components(pdfResultReport);
- 	public void initializeRepository() throws Exception {		
+ 	
+	public void initializeRepository() throws Exception {		
 		
  		reportDetails.put("Test Script Name", this.getClass().getSimpleName());
 		reportDetails.put("Test Script MyWorksshop Document ID", "Doc1234567");

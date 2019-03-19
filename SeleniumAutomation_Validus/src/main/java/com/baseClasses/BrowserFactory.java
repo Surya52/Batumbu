@@ -16,17 +16,34 @@ public class BrowserFactory {
 	
 	 static WebDriver openBrowser(String browserName) {
 	        WebDriver driver = null;
+	        
 	        if (browserName.toLowerCase().contains("firefox")) {
-	            driver = new FirefoxDriver();
+	            
+	        	
+	        	System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")	+ "\\lib\\geckodriver.exe");
+	        	driver = new FirefoxDriver();
 	            browser="Firefox";
+	            System.out.println("browser   :::::::"+browser);
+		        driver.manage().window().maximize();
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	           
 	            return driver;
 	        }
+	        
 	        if (browserName.toLowerCase().contains("internet")) {
-	            driver = new InternetExplorerDriver();
+	           
+	        //	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")	+ "\\lib\\");
+	        	driver = new InternetExplorerDriver();
 	            browser="IE";
-	            return driver;
+	            System.out.println("browser   :::::::"+browser);
+		        driver.manage().window().maximize();
+		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	             return driver;
 	        }
+	        
 	        if (browserName.toLowerCase().contains("chrome")) {
+	        
+	        	
 	        	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")	+ "\\lib\\chromedriver.exe");
 	            driver = new ChromeDriver();	
 	            browser="Google Chrome";

@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\user\git\Batumbu\SeleniumAutomation_Validus\Indonesia\Batumubu_Investor_Individual_Foreign_Citizens.xml</span>
+                    <span>C:\Users\user\git\Batumbu\SeleniumAutomation_Validus\Indonesia\Batumbu_Investor_ForeignBUsiess_Entity.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.testScripts_Indonesia.Batumbu_Investor_IndividualForeigners" hash-for-method="f(6)">f(6)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity" hash-for-method="f(1)">f(1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -120,39 +120,27 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.testScripts_Indonesia.Batumbu_Investor_IndividualForeigners</span>
+              <span class="class-name">com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="f(6)">
-                  </a> <!-- f(6) -->
+                  <a name="f(1)">
+                  </a> <!-- f(1) -->
                   <span class="method-name">f</span>
-                  <span class="parameters">(6)</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=72.0.3626.119)
-  (Driver info: chromedriver=2.39.562718 (9a2698cba08cf5a471a29d30c8b3e12becabb0e9),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
-System info: host: &apos;LENOVO&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_181&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.39.562718 (9a2698cba08cf5..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.119, webStorageEnabled: true}
-Session ID: 4a2009328a166931dacda6432cefd9e2
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
-	at com.baseClasses.PDFResultReport.fullScreenCapture(PDFResultReport.java:823)
-	at com.baseClasses.PDFResultReport.addStepDetails(PDFResultReport.java:362)
-	at com.components.Batumbu_IndividualForeign_Components.salesforcefund(Batumbu_IndividualForeign_Components.java:633)
-	at com.testScripts_Indonesia.Batumbu_Investor_IndividualForeigners.f(Batumbu_Investor_IndividualForeigners.java:42)
-... Removed 29 stack frames
+                  <span class="parameters">(1)</span>
+                  <div class="stack-trace">java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:125)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:43)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:166)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:346)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:168)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at com.baseClasses.BrowserFactory.openBrowser(BrowserFactory.java:20)
+	at com.baseClasses.Listener.beforeInvocation(Listener.java:16)
+... Removed 23 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Scenario:1 - Test the functionality of Consumer with valid flow)                  </em>
@@ -163,7 +151,7 @@ Session ID: 4a2009328a166931dacda6432cefd9e2
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\user\git\Batumbu\SeleniumAutomation_Validus\Indonesia\Batumubu_Investor_Individual_Foreign_Citizens.xml</span>
+            <span class="header-content">C:\Users\user\git\Batumbu\SeleniumAutomation_Validus\Indonesia\Batumbu_Investor_ForeignBUsiess_Entity.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -174,10 +162,10 @@ Session ID: 4a2009328a166931dacda6432cefd9e2
     &lt;listener class-name=&quot;com.baseClasses.Listener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
-    &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
-    &lt;parameter name=&quot;TestcaseNo&quot; value=&quot;6&quot;/&gt;
+    &lt;parameter name=&quot;browserName&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;TestcaseNo&quot; value=&quot;1&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.testScripts_Indonesia.Batumbu_Investor_IndividualForeigners&quot;/&gt;
+      &lt;class name=&quot;com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -220,13 +208,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'f')
-data.setCell(0, 2, 'com.testScripts_Indonesia.Batumbu_Investor_IndividualForeigners')
-data.setCell(0, 3, 677391);
+data.setCell(0, 2, 'com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity')
+data.setCell(0, 3, 232);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 minutes</span>
+              <span class="suite-total-time">Total running time: 232 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -252,34 +240,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.testScripts_Indonesia.Batumbu_Investor_IndividualForeigners</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">setUpSuiteDetails(org.testng.TestRunner@44592c39)</span>
+                <span class="method-name">setUpSuiteDetails(org.testng.TestRunner@4d910fd6)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">BeforeClass</span>
-                <span class="method-start">205 ms</span>
+                <span class="method-start">197 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">captureDesc(public void com.testScripts_Indonesia.Batumbu_Investor_IndividualForeigners.f(java.lang.String) thro...)</span>
-                <span class="method-start">3226 ms</span>
+                <span class="method-name">captureDesc(public void com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity.f(java.lang.String) th...)</span>
+                <span class="method-start">3216 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">f(6)</span>
-                <span class="method-start">3227 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">682623 ms</span>
+                <span class="method-start">3454 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">684306 ms</span>
+                <span class="method-start">3650 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
