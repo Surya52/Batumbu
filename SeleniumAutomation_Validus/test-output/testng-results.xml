@@ -1,96 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="3433" started-at="2019-03-18T12:25:50Z" finished-at="2019-03-18T12:25:54Z">
+  <suite name="Suite" duration-ms="366646" started-at="2019-03-19T06:27:03Z" finished-at="2019-03-19T06:33:10Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="3433" started-at="2019-03-18T12:25:50Z" finished-at="2019-03-18T12:25:54Z">
-      <class name="com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity">
-        <test-method status="PASS" signature="setUpSuiteDetails(org.testng.ITestContext)[pri:0, instance:com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity@15d9bc04]" name="setUpSuiteDetails" is-config="true" duration-ms="187" started-at="2019-03-18T12:25:50Z" finished-at="2019-03-18T12:25:50Z">
+    <test name="Test" duration-ms="366646" started-at="2019-03-19T06:27:03Z" finished-at="2019-03-19T06:33:10Z">
+      <class name="com.testScripts_Indonesia.Batumbu_RegisterasaSME">
+        <test-method status="PASS" signature="setUpSuiteDetails(org.testng.ITestContext)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="setUpSuiteDetails" is-config="true" duration-ms="194" started-at="2019-03-19T06:27:03Z" finished-at="2019-03-19T06:27:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4d910fd6]]>
+                <![CDATA[org.testng.TestRunner@579dde54]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpSuiteDetails -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity@15d9bc04]" name="BeforeClass" is-config="true" duration-ms="3011" started-at="2019-03-18T12:25:50Z" finished-at="2019-03-18T12:25:53Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="BeforeClass" is-config="true" duration-ms="3015" started-at="2019-03-19T06:27:03Z" finished-at="2019-03-19T06:27:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="captureDesc(java.lang.reflect.Method)[pri:0, instance:com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity@15d9bc04]" name="captureDesc" is-config="true" duration-ms="0" started-at="2019-03-18T12:25:53Z" finished-at="2019-03-18T12:25:53Z">
+        <test-method status="PASS" signature="f(java.lang.String)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="f" duration-ms="360221" started-at="2019-03-19T06:27:06Z" description="Scenario:1 - Test the functionality of Consumer with valid flow" finished-at="2019-03-19T06:33:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity.f(java.lang.String) throws java.lang.Throwable]]>
+                <![CDATA[9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="captureDesc(java.lang.reflect.Method)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="captureDesc" is-config="true" duration-ms="0" started-at="2019-03-19T06:27:06Z" finished-at="2019-03-19T06:27:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.testScripts_Indonesia.Batumbu_RegisterasaSME.f(java.lang.String) throws java.lang.Throwable]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureDesc -->
-        <test-method status="FAIL" signature="f(java.lang.String)[pri:0, instance:com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity@15d9bc04]" name="f" duration-ms="232" started-at="2019-03-18T12:25:53Z" description="Scenario:1 - Test the functionality of Consumer with valid flow" finished-at="2019-03-18T12:25:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
-at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:125)
-at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:43)
-at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:166)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:346)
-at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:168)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:103)
-at com.baseClasses.BrowserFactory.openBrowser(BrowserFactory.java:20)
-at com.baseClasses.Listener.beforeInvocation(Listener.java:16)
-at org.testng.internal.invokers.InvokedMethodListenerInvoker$InvokeBeforeInvocationWithoutContextStrategy.callMethod(InvokedMethodListenerInvoker.java:84)
-at org.testng.internal.invokers.InvokedMethodListenerInvoker.invokeListener(InvokedMethodListenerInvoker.java:62)
-at org.testng.internal.Invoker.runInvokedMethodListeners(Invoker.java:490)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:560)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity@15d9bc04]" name="afterClass" is-config="true" duration-ms="165" started-at="2019-03-18T12:25:53Z" finished-at="2019-03-18T12:25:54Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="afterClass" is-config="true" duration-ms="1381" started-at="2019-03-19T06:33:08Z" finished-at="2019-03-19T06:33:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity@15d9bc04]" name="afterSuite" is-config="true" duration-ms="46" started-at="2019-03-18T12:25:54Z" finished-at="2019-03-18T12:25:54Z">
+        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="afterSuite" is-config="true" duration-ms="21" started-at="2019-03-19T06:33:10Z" finished-at="2019-03-19T06:33:10Z">
           <exception class="java.lang.NoClassDefFoundError">
             <message>
               <![CDATA[com/sun/mail/util/MailLogger]]>
@@ -134,7 +92,7 @@ at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity -->
+      </class> <!-- com.testScripts_Indonesia.Batumbu_RegisterasaSME -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

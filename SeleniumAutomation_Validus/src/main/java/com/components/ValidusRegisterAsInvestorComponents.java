@@ -101,7 +101,7 @@ public void salesforceIntegrationLogin() throws Throwable {
 	try {
 		Thread.sleep(2000);
 		Screen s = new Screen();
-		s.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+		s.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
 		waitForObj(2000);
 		switchwindow(1);
 		ThreadLocalWebdriver.getDriver().get("https://test.salesforce.com/");
@@ -125,7 +125,7 @@ public void gmailOTP() throws Throwable {
 	try {
 	Screen s = new Screen();
     Thread.sleep(2000);
-	s.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+	s.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
 	Thread.sleep(5000);
 	try {
 		switchwindow(2);
@@ -146,9 +146,9 @@ public void gmailOTP() throws Throwable {
 	click(smelocators.emailNext);
 	Thread.sleep(7000);
 	Screen S=  new Screen();
-	S.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\mailmenu.png");
+	S.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\mailmenu.png");
 	Screen S2=  new Screen();
-	S2.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\MailIcon.png");
+	S2.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\MailIcon.png");
 	
  	set(smelocators.gmailSearch, "noreply@salesforce.com");
  	
@@ -188,24 +188,23 @@ String[] str1 = strn.split("\n");
 	}
 	
 	  			
-/*	Screen maildot=new Screen();
-	maildot.click("C:\\Users\\user\\Desktop\\Automate Registration Pics\\maildot.png");
-	Screen maildelete=new Screen();
-	maildelete.click("C:\\Users\\user\\Desktop\\Automate Registration Pics\\deleltemail.png");
-*/	
-	
  	
+ 	screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\DeleteMaiil.png");
+ 	Actions a = new Actions(ThreadLocalWebdriver.getDriver());
+	a.sendKeys(Keys.F5).build().perform();
+	Robot r=new Robot();
+	r.keyPress(KeyEvent.VK_F5);
+	r.keyRelease(KeyEvent.VK_F5);
 	 Thread.sleep(3000);
+	 
 	 ThreadLocalWebdriver.getDriver().close();
-	
-	
-
+	 
 	Thread.sleep(4000);
 	try {
 		 switchwindow(1);
 		Thread.sleep(2000);
 	} catch (Exception e) {
-		// TODO Auto-generated catch block
+	 
 		e.printStackTrace();
 	}
 	
@@ -243,6 +242,7 @@ public void salesforceOTP() throws Exception {
 			JavascriptExecutor js = (JavascriptExecutor) ThreadLocalWebdriver.getDriver();
 			WebElement el = ThreadLocalWebdriver.getDriver().findElement(By.cssSelector("input[id=otpEntered]"));
 			js.executeScript("arguments[0].value = arguments[1];", el, optMsg);
+			click(smelocators.SMEContinue);
 			Thread.sleep(10000);
 	      	ThreadLocalWebdriver.getDriver().close();
 	     	Thread.sleep(5000);
@@ -259,13 +259,12 @@ public void salesforceOTP() throws Exception {
 		 	waitForObj(10000);
 			 
 		 	Screen S= new Screen();
-			 S.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\LeaveButton.png");
+			 S.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\LeaveButton.png");
 			Thread.sleep(15000);
 			swtichToChildTab();
 			click(smelocators.LoginKiPlatform);
-			 /*Screen S2= new Screen();
-			 S2.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\LoginkiPlatform.png");
-			*/	 pdfResultReport.addStepDetails("Salesforce mobile and email verification", "User should able to verify mobile and email successfully",
+	  
+			pdfResultReport.addStepDetails("Salesforce mobile and email verification", "User should able to verify mobile and email successfully",
 						"Successfully verified the email and mobile from the salesforce application" + " ", "Pass", "Y");
 			} 
 	catch (Exception e3) {
@@ -409,8 +408,8 @@ public void salesforceOTP() throws Exception {
 			Thread.sleep(2000);
 			
 			Screen s=new Screen();
-			s.type("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\text.png", "C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\dummy-pdf_2.pdf");
-			s.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenButton.png");
+			s.type("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\text.png", "C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\dummy-pdf_2.pdf");
+			s.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenButton.png");
 			 
 		}catch(Exception e) {
 			System.out.println("Unable to upload the file");
@@ -869,14 +868,16 @@ pdfResultReport.addStepDetails("Investorfund","User should able to do fund","Suc
 			set(smelocators.firstName, pdfResultReport.testData.get("First Name"));
 			set(smelocators.MiddleName, pdfResultReport.testData.get("Middle Name"));
 			set(smelocators.lastname , pdfResultReport.testData.get("Last Name"));
+			set(smelocators.NRIcNumber, pdfResultReport.testData.get("NRIC/Passport Number"));
+			set(smelocators.SimNuber, pdfResultReport.testData.get("NRIC/Passport Number"));
 			set(smelocators.PassportNumber, pdfResultReport.testData.get("NRIC/Passport Number"));
 			set(smelocators.Position, pdfResultReport.testData.get("Designation"));
 			waitForObj(2000);
 			select(smelocators.Aboutbatumbu, pdfResultReport.testData.get("About Validus"));
 		
-			set(smelocators.Source, pdfResultReport.testData.get("Source"));
+			js_Select(smelocators.Source, pdfResultReport.testData.get("Source"),"Source");
 		
-			select(smelocators.EntityType, pdfResultReport.testData.get("EntityType"));
+			js_Select(smelocators.EntityType, pdfResultReport.testData.get("EntityType"),"Entity Type");
 			waitForObj(2000);
 			js_type(smelocators.NameofUkm, pdfResultReport.testData.get("UKM Name"),"Name Of UKM");
 			 
@@ -891,7 +892,7 @@ pdfResultReport.addStepDetails("Investorfund","User should able to do fund","Suc
 			set(smelocators.ManagementPosition1, pdfResultReport.testData.get("Designation"));
 			js_type(smelocators.servesince1, pdfResultReport.testData.get("ServeSince"),"Serve Since");
 			 
-			
+			click(smelocators.NameOfmanagement2);
 			set(smelocators.NameOfmanagement2, pdfResultReport.testData.get("ManagementName"));
 			set(smelocators.ManagementPosition2, pdfResultReport.testData.get("Designation"));
      		js_type(smelocators.servesince2, pdfResultReport.testData.get("ServeSince"),"Serve Since Two");
@@ -905,7 +906,7 @@ pdfResultReport.addStepDetails("Investorfund","User should able to do fund","Suc
 			A.moveToElement(ele).click().build().perform();
 			S.selectByIndex(1);
 			
-			
+			click(smelocators.Shareholder1);
 			set(smelocators.Shareholder1, pdfResultReport.testData.get("ManagementName"));
 			set(smelocators.Percentage1, pdfResultReport.testData.get("Percentage"));
 			
@@ -998,7 +999,7 @@ pdfResultReport.addStepDetails("Investorfund","User should able to do fund","Suc
 			waitForObj(2000);
 			set(smelocators.noofEmployees, "2");
 			waitForObj(2000);
-			set(smelocators.annualRevenuepreviousyear, pdfResultReport.testData.get("Annual Revenue Previous year"));
+			set(smelocators.annualRevenuepreviousyear, pdfResultReport.testData.get("Annual Revenue latest year"));
 			waitForObj(2000);
 			set(smelocators.annualRevenueLatestyear, pdfResultReport.testData.get("Annual Revenue latest year"));
 			waitForObj(1000);
@@ -1008,17 +1009,17 @@ pdfResultReport.addStepDetails("Investorfund","User should able to do fund","Suc
 			
 		 	selectbyvalue(smelocators.PersonnelGurrantor1, pdfResultReport.testData.get("ManagementName"));
 		 	select(smelocators.ResidentialStatus1, pdfResultReport.testData.get("GarrentorCitizenShip"));
-		 	set(smelocators.PGALastYeraTax1, pdfResultReport.testData.get("Annual Revenue Previous year"));
+		 	set(smelocators.PGALastYeraTax1, pdfResultReport.testData.get("Annual Revenue latest year"));
 		 	set(smelocators.PGCurrentTax1, pdfResultReport.testData.get("Annual Revenue latest year"));
 		 	
 		 	selectbyvalue(smelocators.PersonnelGurrantor2, pdfResultReport.testData.get("ManagementName"));
 		 	select(smelocators.ResidentialStatus2, pdfResultReport.testData.get("GarrentorCitizenShip"));
-		 	set(smelocators.PGALastYeraTax2, pdfResultReport.testData.get("Annual Revenue Previous year"));
+		 	set(smelocators.PGALastYeraTax2, pdfResultReport.testData.get("Annual Revenue latest year"));
 		 	set(smelocators.PGCurrentTax2, pdfResultReport.testData.get("Annual Revenue latest year"));
 		 	
 		 	selectbyvalue(smelocators.PersonnelGurrantor3, pdfResultReport.testData.get("ManagementName"));
 		 	select(smelocators.ResidentialStatus3, pdfResultReport.testData.get("GarrentorCitizenShip"));
-		 	set(smelocators.PGALastYeraTax3, pdfResultReport.testData.get("Annual Revenue Previous year"));
+		 	set(smelocators.PGALastYeraTax3, pdfResultReport.testData.get("Annual Revenue latest year"));
 		 	set(smelocators.PGCurrentTax3, pdfResultReport.testData.get("Annual Revenue latest year"));
 		 	
 		 	
@@ -1064,7 +1065,7 @@ public void batumbuAdminVerifyDocuments() throws Throwable{
 		try{
 			  waitForObj(2000);
 			Screen S = new Screen();
-			S.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+			S.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
 			//switchwindow(2);
 			switchwindow(1);
 			ThreadLocalWebdriver.getDriver().get("http://149.129.218.139/BatumbuAdmin/public/");
@@ -1097,7 +1098,7 @@ public void batumbuAdminApproval() throws Throwable {
 	try{
 	 	 	waitForObj(2000);
 	 	 /*Screen S = new Screen();
-        S.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+        S.click("C:\\Users\\user\git\Batumbu\SeleniumAutomation_Validus\Media\OpenButton.png");
 		switchwindow(1);
 		ThreadLocalWebdriver.getDriver().get("http://149.129.218.139/BatumbuAdmin/public/");
 		*/
@@ -1135,7 +1136,7 @@ public void batumbuAdminApproveLoan() throws Throwable {
 	try{
 	 	 	waitForObj(2000);
 		/*Screen S = new Screen();
-		S.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+		S.click("C:\\Users\\user\\git\Batumbu\SeleniumAutomation_Validus\Media\OpenButton.png");
 	switchwindow(1);
 	ThreadLocalWebdriver.getDriver().get("http://149.129.218.139/BatumbuAdmin/public/");
  */
@@ -1243,9 +1244,7 @@ public void batumbuAdminApproveLoan() throws Throwable {
 	}
 	}
 
-
-
-
+  
 public void salesforcefund() throws Exception {
 	try {
 	//click(individualforeignlocators.account);

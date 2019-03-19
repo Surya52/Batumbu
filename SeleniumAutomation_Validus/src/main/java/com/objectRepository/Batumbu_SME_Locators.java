@@ -16,8 +16,9 @@ public class Batumbu_SME_Locators {
 	   public By investorLoginTermsandCondition = By.xpath("(//span[@id=\"ibc\"])[2]");
 	   public By investorContinue = By.xpath("//button[@type='submit']");
 	   public By otpContent = By.xpath("//label[@class='active']");
+	   public By SMEContinue	= By.xpath("//a[@class='continue-register']");
 	   
-	   public By salesusername = By.xpath("//input[@id='username']");
+	    public By salesusername = By.xpath("//input[@id='username']");
 		public By salespassword = By.xpath("//input[@id='password']");
 		public By Saleslogin = By.xpath("//input[@value='Log In to Sandbox']");
 
@@ -50,11 +51,15 @@ public class Batumbu_SME_Locators {
 		public By firstName						= By.xpath("(//input[@id='FirstName'])");
 	    public By MiddleName				    = By.xpath("(//input[@id='MiddleName'])");
 		public By lastname 						= By.xpath("(//input[@id='FamilyName'])");
-		public By PassportNumber			    = By.xpath("(//input[@id='NRICNumber'])");
+		public By NRIcNumber			        = By.xpath("(//input[@id='NRICNumber'])");
 		public By Position 						= By.xpath("//input[@id='CompanyDesignation']");
+		public By SimNuber						= By.xpath("(//input[@id='SIMNumber'])[1]");
+		public By PassportNumber				= By.xpath("(//input[@id='PassportNumber'])[1]");
+		
 		public By Aboutbatumbu					= By.xpath("//select[@id='WhereDidYouHearAboutValidus']");
 		public By Source 						= By.xpath("//select[@name='source']");
 		public By EntityType					= By.xpath("//select[@id='CompanyEntityType']");
+		
 		public By NameofUkm						= By.xpath("//input[@id='CompanyName']");
 		//public By BusinessSector				= By.xpath("//select[@id='CompanySector']");
 		public By EstablishmentNumber			= By.xpath("//input[@id='establishmentDeedNumber']");
