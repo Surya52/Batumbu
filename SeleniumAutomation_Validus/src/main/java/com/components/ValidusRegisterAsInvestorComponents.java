@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.server.handler.SwitchToWindow;
 import org.openqa.selenium.support.ui.Select;
+import org.python.modules.thread.thread;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Key;
 import org.sikuli.script.Screen;
@@ -21,9 +22,11 @@ import org.sikuli.script.Screen;
 import com.baseClasses.BaseClass_Web;
 import com.baseClasses.PDFResultReport;
 import com.baseClasses.ThreadLocalWebdriver;
+import com.mobileUtilities_iOS.ThreadLocaliOSDriver;
 import com.objectRepository.Batumbu_Borrower_Locators;
 import com.objectRepository.Batumbu_SME_Locators;
 import com.objectRepository.DBSOpenAccountLocators;
+import com.objectRepository.LoanDisbrusal_Process_Locators;
 import com.objectRepository.ValidusRegisterAsInvester;
 import com.objectRepository.ValidusSmoke_Loc;
 
@@ -34,7 +37,7 @@ public class ValidusRegisterAsInvestorComponents extends BaseClass_Web{
 	public ValidusRegisterAsInvester registerasInvestorlocators=new ValidusRegisterAsInvester();
 	public ValidusSmoke_Loc validussmokelocators = new ValidusSmoke_Loc();
 	 public Batumbu_SME_Locators  smelocators   = new Batumbu_SME_Locators();
-	
+	public LoanDisbrusal_Process_Locators loanlocators = new LoanDisbrusal_Process_Locators();
 	
 	public ValidusRegisterAsInvestorComponents(PDFResultReport pdfresultReport){
 		this.pdfResultReport=pdfresultReport;
@@ -293,9 +296,8 @@ public void salesforceOTP() throws Exception {
 			 //switchwindow(0);
 			  
 			//click(validussmokelocators.validusMainpageLogin);
-			/*swtichToChildTab();
-			switchwindow(1);
-			*/js_type(smelocators.emailIDInvestor, pdfResultReport.testData.get("EmailIDInvestor"), "username");
+			 
+			js_type(smelocators.emailIDInvestor, pdfResultReport.testData.get("EmailIDInvestor"), "username");
 			set(smelocators.passwordInvestor, pdfResultReport.testData.get("PasswordInvestor"));
 		 
 			click(registerasInvestorlocators.login);
@@ -308,8 +310,137 @@ public void salesforceOTP() throws Exception {
 			  pdfResultReport.addStepDetails("login","Unable to open the url", "Unable to login into the application"+e.getMessage(),"Fail", "N");
 	  }
 	}
+	  
+	
+	public void fundinSME() throws Exception {
+		
+		
+		//*[@id="myTable"]/tbody/tr[6]/td[2]
+		
+		
+	//	click(smelocators.Platform);
+		click(smelocators.AllLiveFacilities);
+		try {
+		String SmeBefore = "//*[@id='myTable']/tbody/tr[";
+		String SMeAfter  = "]/td[2]";
+		
+		WebElement ele =ThreadLocalWebdriver.getDriver().findElement(By.xpath("//span[@class='funds']"));
+		String Funds =ele.getText();
+		System.out.println("amount is "+Funds);
+		//int FundsAvailable=Integer.parseInt(Funds);
+	 	
+		List<WebElement> rows =ThreadLocalWebdriver.getDriver().findElements(By.xpath("//*[@id='myTable']/tbody/tr"));
+		int RowCount     = rows.size();
+		System.out.println("Table Total Data Is "+rows);
+		System.out.println("Number Of Rows Is  "+ RowCount);
+     
+		for(int i=1;i<=RowCount;i++) {
+	
+		WebElement Borrower = ThreadLocalWebdriver.getDriver().findElement(By.xpath(SmeBefore+i+SMeAfter));
+		System.out.println(Borrower.getText());
+		
+		//if(Borrower.getText().equals(pdfResultReport.testData.get("UKM Name"))) {
+	
+			if(Borrower.getText().equals("CV Bahagia Selalu")) {
+			 
+		String DanaiBefore  =  "//*[@id='myTable']/tbody/tr[";
+		String DanaiAfter	= "]/td[9]";
+		Thread.sleep(3000);
+		ThreadLocalWebdriver.getDriver().findElement(By.xpath(DanaiBefore+i+DanaiAfter)).click();
+	
+		
+		 String Amount = ThreadLocalWebdriver.getDriver().findElement(By.xpath("//span[@id='amtleft']")).getText();
+		 System.out.println("Amount left for Funding.."+ Amount);
+			
+		    Thread.sleep(5000);
+			ThreadLocalWebdriver.getDriver().findElement(By.xpath("//input[@id='investmentAmount']")).sendKeys(Amount);
+			Thread.sleep(5000);
+			ThreadLocalWebdriver.getDriver().findElement(By.xpath("//li[@id='fundbtn']")).click();
+			
+			ThreadLocalWebdriver.getDriver().findElement(By.xpath("//label[@for='filled-in-box']")).click();
+			ThreadLocalWebdriver.getDriver().findElement(By.xpath("//label[@for='filled-in-box1']")).click();
+			ThreadLocalWebdriver.getDriver().findElement(By.xpath("//label[@for='filled-in-box2']")).click();
+			ThreadLocalWebdriver.getDriver().findElement(By.xpath("//label[@for='filled-in-box3']")).click();
+		 	
+			
+			ThreadLocalWebdriver.getDriver().findElement(By.xpath("(//button[text()='Konfirmasi'])[2]")).click();
+			ThreadLocalWebdriver.getDriver().findElement(By.xpath("(//button[text()='OK'])[2]")).click();
+		}} 	 
+		}catch (Exception e) {
+			 e.printStackTrace();	}
+	}
 	
 	
+	
+	public void batumbuAdminFunding() throws Exception {
+		 
+		screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+		  switchwindow(1);
+		ThreadLocalWebdriver.getDriver().get("http://149.129.218.139/BatumbuAdmin/public/");
+		
+		set(smelocators.AdminMail, "fundrel@batumbu.id");
+		set(smelocators.AdminPassword, "Admin123");
+		click(smelocators.AdminLogin);
+		
+		waitForObj(2000);
+		click(smelocators.LoanApplications);
+		waitForObj(2000);
+		set(smelocators.SMESEarch, pdfResultReport.testData.get("UKM Name"));
+		click(smelocators.ViewDetailsLender);
+		 pageDown();
+		 pageDown();
+		  
+		  
+		 List<WebElement> Rows =(List<WebElement>) ThreadLocaliOSDriver.getDriver().findElement(By.xpath("//*[@id='example1']/tbody/tr"));
+		 int noofrows= Rows.size();
+		 System.out.println("total No oF Given Lenders Are"+ noofrows);
+		 
+		 
+		 String beforeamount =  "//*[@id='example1']/tbody/tr[" ;
+			String AfterAmount= "]/td[3]";
+	
+			int finalamount=0;
+		 for(int i =1;i<=noofrows;i++) {
+			 
+				
+	 WebElement elmnt= ThreadLocaliOSDriver.getDriver().findElement(By.xpath(beforeamount+i+AfterAmount));
+	 String	 amount= elmnt.getText();
+	 System.out.println("Amount fro Row"+"  "+i+"is"+amount );
+		
+	 int  rowsamount=Integer.parseInt(amount)+finalamount;
+	 finalamount =  rowsamount;
+	
+	 
+		 }
+		click(loanlocators.BookinOrder);
+		 set(loanlocators.InvestmentAmount, String.valueOf(finalamount));
+		 click(loanlocators.InvestmentSubmit);
+		 
+		 click(loanlocators.PledgeLenderDocs);
+
+		 List<WebElement> pledgerows =(List<WebElement>) ThreadLocaliOSDriver.getDriver().findElement(By.xpath("//*[@id='example1']/tbody/tr"));
+		 int totalrows= pledgerows.size();
+		 System.out.println("total No oF Given Lenders Are"+ noofrows);
+		 String beforepldgeview =  "//*[@id=\"InvestorDeposits\"]/tbody/tr[" ;
+		 String Afterpledgeview= "]/td[8]";
+	
+			  for(int i =1;i<=noofrows;i++) {
+ 
+		WebElement element= ThreadLocaliOSDriver.getDriver().findElement(By.xpath(beforepldgeview+i+Afterpledgeview));
+		element.click();
+		click(loanlocators.VACheckBox);
+		click(loanlocators.PledgeView2);
+		waitForObj(7000);
+		screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\PledgeBack.png");
+		click(loanlocators.PledgeLenderDocs);
+			  
+			  }
+		 
+		 
+		 
+	}
+	
+	 
 	public void STWCFacility() throws Throwable {
 		try {
 			
@@ -1052,7 +1183,7 @@ pdfResultReport.addStepDetails("Investorfund","User should able to do fund","Suc
 			click(smelocators.masuk);
 
 			waitForObj(5000);			
-			screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\SmeExit.png");
+			 
 		}catch(Exception e) {
 			 
 			log.fatal("Unable to Submit Loan" + e.getMessage());
@@ -1066,11 +1197,9 @@ public void batumbuAdminVerifyDocuments() throws Throwable{
 		
 		try{
 			  waitForObj(2000);
-			Screen S = new Screen();
-			S.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
-			//switchwindow(2);
-			switchwindow(1);
-			ThreadLocalWebdriver.getDriver().get("http://149.129.218.139/BatumbuAdmin/public/");
+			 screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+			switchwindow(2);
+			 ThreadLocalWebdriver.getDriver().get("http://149.129.218.139/BatumbuAdmin/public/");
 			
 			set(smelocators.AdminMail, "customersuccess@batumbu.id");
 			set(smelocators.AdminPassword, "Admin123");
@@ -1123,7 +1252,7 @@ public void batumbuAdminApproval() throws Throwable {
 		click(smelocators.SubmitLender);
 		waitForObj(2000);
 		click(smelocators.ApproveLender);
-		waitForObj(5000);
+		waitForObj(10000);
 		//click(smelocators.AdminLogout);
 		JSClick(smelocators.AdminLogout, "LogOut Button");
 	}catch(Exception e)
@@ -1194,12 +1323,12 @@ public void batumbuAdminApproveLoan() throws Throwable {
 	    //ThreadLocalWebdriver.getDriver().findElement(By.xpath("//a[contains(text(),'Credit Assessment')]")).click();
 	    uploadFile(smelocators.PromisoryNote);
 	    
-	    waitForObj(4000);
+	    waitForObj(7000);
 	    click(smelocators.UploadPromisory);
-	     waitForObj(5000);
+	     waitForObj(7000);
 	    JSClick(smelocators.ApproveLoan , "Approve Loan");
 	     
-    waitForObj(4000);
+    waitForObj(7000);
 	    pageDown();
 	    pageDown();
 	    click(smelocators.EditLoanApplication);
@@ -1215,35 +1344,29 @@ public void batumbuAdminApproveLoan() throws Throwable {
 	    set(smelocators.InvoiceReceiveDate, "09/03/2017");
 	    set(smelocators.invoiceDueDate,"09/04/2017" );
 	    click(smelocators.SubmitLoanApplication);
-	    waitForObj(7000);
+	    Thread.sleep(10000); 
 	    
 	    click(smelocators.FacilityApproval);
 	    
 	  /*  uploadFile(smelocators.ChooseFileFacility);
 	    click(smelocators.SubmitTomarket);
-	  */  waitForObj(7000);
-	    
+	  */Thread.sleep(10000);
 	    
 	    JavascriptExecutor js = (JavascriptExecutor) ThreadLocalWebdriver.getDriver();
 	    js.executeScript("window.scrollBy(0,1000)");
+	   Thread.sleep(3000);
 	    JSClick(smelocators.ApproveToMARKET, "Approve to market");
-	    waitForObj(7000);
 	     
-	   /* Screen approve = new Screen();
-	    approve.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\AdminApproveButton.png");
-	   */  
-	   
+	    //screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\AdminApproveButton.png");
+	    Thread.sleep(10000);
 	   js.executeScript("window.scrollBy(0,1000)");
-	   JSClick(registerasInvestorlocators.ListToMarketPlace,"List To MarketPlace");
+	 //  JSClick(registerasInvestorlocators.ListToMarketPlace,"List To MarketPlace");
 	    
-	       
-	   /*Screen S2= new Screen();
-	    S2.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\ListTomarket.png");
-	    */
-	   
-	   	waitForObj(10000);
+	   screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\ListTomarket.png");    
+	     Thread.sleep(10000);
+	     
 	    JSClick(smelocators.LoanApplications,"Loan Applications");
-	    waitForObj(2000);
+	    waitForObj(5000);
 		set(smelocators.SMESEarch, pdfResultReport.testData.get("UKM Name"));
 		click(smelocators.ViewDetailsLender);
 	    

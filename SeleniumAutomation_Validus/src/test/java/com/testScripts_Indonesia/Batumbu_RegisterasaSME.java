@@ -29,11 +29,11 @@ public class Batumbu_RegisterasaSME extends BaseClass_Web{
 	  
 	   
 		borrowercomponents.openURL();
-	/*	borrowercomponents.CreateAccountSME();
+		borrowercomponents.CreateAccountSME();
 		borrowercomponents.salesforceIntegrationLogin();
 		borrowercomponents.gmailOTP();
 		borrowercomponents.salesforceOTP();
-	*/ 
+	 
 		borrowercomponents.login();
 		borrowercomponents.registeringasSME();
 		borrowercomponents.SubmitLoan();

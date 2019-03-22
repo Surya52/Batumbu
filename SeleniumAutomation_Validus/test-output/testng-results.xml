@@ -2,53 +2,53 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="679623" started-at="2019-03-19T08:34:13Z" finished-at="2019-03-19T08:45:32Z">
+  <suite name="Suite" duration-ms="46276" started-at="2019-03-21T11:16:27Z" finished-at="2019-03-21T11:17:14Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="679623" started-at="2019-03-19T08:34:13Z" finished-at="2019-03-19T08:45:32Z">
-      <class name="com.testScripts_Indonesia.Batumbu_RegisterasaSME">
-        <test-method status="PASS" signature="setUpSuiteDetails(org.testng.ITestContext)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="setUpSuiteDetails" is-config="true" duration-ms="180" started-at="2019-03-19T08:34:13Z" finished-at="2019-03-19T08:34:13Z">
+    <test name="Test" duration-ms="46276" started-at="2019-03-21T11:16:27Z" finished-at="2019-03-21T11:17:14Z">
+      <class name="com.testScripts_Indonesia.Funding_Sme">
+        <test-method status="PASS" signature="setUpSuiteDetails(org.testng.ITestContext)[pri:0, instance:com.testScripts_Indonesia.Funding_Sme@15d9bc04]" name="setUpSuiteDetails" is-config="true" duration-ms="194" started-at="2019-03-21T11:16:27Z" finished-at="2019-03-21T11:16:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1acd952e]]>
+                <![CDATA[org.testng.TestRunner@6aa3bfc]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpSuiteDetails -->
-        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="BeforeClass" is-config="true" duration-ms="3013" started-at="2019-03-19T08:34:13Z" finished-at="2019-03-19T08:34:16Z">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.testScripts_Indonesia.Funding_Sme@15d9bc04]" name="BeforeClass" is-config="true" duration-ms="3008" started-at="2019-03-21T11:16:27Z" finished-at="2019-03-21T11:16:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="f(java.lang.String)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="f" duration-ms="673234" started-at="2019-03-19T08:34:16Z" description="Scenario:1 - Test the functionality of Consumer with valid flow" finished-at="2019-03-19T08:45:29Z">
+        <test-method status="PASS" signature="captureDesc(java.lang.reflect.Method)[pri:0, instance:com.testScripts_Indonesia.Funding_Sme@15d9bc04]" name="captureDesc" is-config="true" duration-ms="1" started-at="2019-03-21T11:16:30Z" finished-at="2019-03-21T11:16:30Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[9]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="captureDesc(java.lang.reflect.Method)[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="captureDesc" is-config="true" duration-ms="0" started-at="2019-03-19T08:34:16Z" finished-at="2019-03-19T08:34:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.testScripts_Indonesia.Batumbu_RegisterasaSME.f(java.lang.String) throws java.lang.Throwable]]>
+                <![CDATA[public void com.testScripts_Indonesia.Funding_Sme.f(java.lang.String) throws java.lang.Throwable]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureDesc -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="afterClass" is-config="true" duration-ms="1348" started-at="2019-03-19T08:45:31Z" finished-at="2019-03-19T08:45:32Z">
+        <test-method status="PASS" signature="f(java.lang.String)[pri:0, instance:com.testScripts_Indonesia.Funding_Sme@15d9bc04]" name="f" duration-ms="39935" started-at="2019-03-21T11:16:30Z" description="Scenario:1 - Test the functionality of Consumer with valid flow" finished-at="2019-03-21T11:17:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.testScripts_Indonesia.Funding_Sme@15d9bc04]" name="afterClass" is-config="true" duration-ms="1306" started-at="2019-03-21T11:17:12Z" finished-at="2019-03-21T11:17:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:com.testScripts_Indonesia.Batumbu_RegisterasaSME@15d9bc04]" name="afterSuite" is-config="true" duration-ms="18" started-at="2019-03-19T08:45:33Z" finished-at="2019-03-19T08:45:33Z">
+        <test-method status="FAIL" signature="afterSuite()[pri:0, instance:com.testScripts_Indonesia.Funding_Sme@15d9bc04]" name="afterSuite" is-config="true" duration-ms="34" started-at="2019-03-21T11:17:14Z" finished-at="2019-03-21T11:17:14Z">
           <exception class="java.lang.NoClassDefFoundError">
             <message>
               <![CDATA[com/sun/mail/util/MailLogger]]>
@@ -92,7 +92,7 @@ at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.testScripts_Indonesia.Batumbu_RegisterasaSME -->
+      </class> <!-- com.testScripts_Indonesia.Funding_Sme -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

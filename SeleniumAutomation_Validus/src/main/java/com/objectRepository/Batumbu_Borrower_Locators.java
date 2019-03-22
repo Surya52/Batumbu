@@ -6,9 +6,7 @@ public class Batumbu_Borrower_Locators {
 
 	
 	
-	
-	
-			public By borrower					    = By.xpath("//button[contains(text(),'Wira UKM')]");
+	 		public By borrower					    = By.xpath("//button[contains(text(),'Wira UKM')]");
 			public By emailIDInvestor 				= By.xpath("//input[@id='Email_Id']");
 			public By passwordInvestor			    = By.xpath("//input[@id='Password']");
 			public By confirmPasswordInvestor 		= By.xpath("//input[@id='ConfirmPassword']");

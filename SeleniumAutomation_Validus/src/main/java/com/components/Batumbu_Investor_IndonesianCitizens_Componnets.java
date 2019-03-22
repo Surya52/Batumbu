@@ -359,6 +359,8 @@ public class Batumbu_Investor_IndonesianCitizens_Componnets extends BaseClass_We
 			 set(indonesiancitizenlocators.postalCode2, pdfResultReport.testData.get("Postal code"));
 			 waitForObj(2000);
 			 
+			 
+			 
 			 js_type(indonesiancitizenlocators.Networthprevious, pdfResultReport.testData.get("Net Profit loss previous year"),"Net Profit Previous Year");
 			 js_type(indonesiancitizenlocators.NetwothCurrentyear, pdfResultReport.testData.get("Annual Revenue latest year"),"Net Profit Current Year");
 			 

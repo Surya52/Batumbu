@@ -6,7 +6,7 @@
     <test name="Test">
         <parameter name="browserName" value="chrome"></parameter>
         <classes>
-           <parameter name="TestcaseNo" value="3"></parameter>   
+           <parameter name="TestcaseNo" value="4"></parameter>   
             <class name="com.testScripts_Indonesia.Batumbu_Foreign_Legal_Entities" />
         </classes>
     </test> 

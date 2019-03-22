@@ -45,13 +45,12 @@ public class Batumbu_Foreign_Legal_Entities extends BaseClass_Web{
 	  	foreignlegalcomponents.salesforceIntegrationLogin();
 	  	foreignlegalcomponents.gmailOTP();
 	  	foreignlegalcomponents.salesforceOTP();	
-	  	
-	  	
+	  	 
 	  	foreignlegalcomponents.login();
 	  	foreignlegalcomponents.navigateToForeignlegalentity();
 	  	foreignlegalcomponents.foreignLegalEntityRegistration();
 	  	foreignlegalcomponents.login();
-	  	
+	  	 
 	  	foreignlegalcomponents.batumbuAdminApproval();
 	   	foreignlegalcomponents.salesforcefund();
 	  	foreignlegalcomponents.investorfunddetails();

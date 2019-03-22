@@ -436,22 +436,22 @@ public class Batumbu_Investor_ForeignBusinessEntity_Components extends BaseClass
 			
 			waitForObj(2000);
 		 	
-			uploadFile(foreigbusinessloc.Upload1);
+			uploadFile(foreigbusinessloc.KTP);
 			waitForObj(10000);
-			uploadFile(foreigbusinessloc.Upload2);
+			uploadFile(foreigbusinessloc.SIM);
 			waitForObj(10000);
-			uploadFile(foreigbusinessloc.Upload3);
+			uploadFile(foreigbusinessloc.FrontPassport);
 			waitForObj(10000);
-			uploadFile(foreigbusinessloc.Upload4);
+			uploadFile(foreigbusinessloc.RearPassport);
 			waitForObj(10000);
-			uploadFile(foreigbusinessloc.Upload5);
+			uploadFile(foreigbusinessloc.Certificateofestablishment);
 			waitForObj(10000);
-			uploadFile(foreigbusinessloc.Upload6);
+			uploadFile(foreigbusinessloc.DeedofEstablishment);
 			pageDown();
 			waitForObj(10000);
-			uploadFile(foreigbusinessloc.Upload7);
+			uploadFile(foreigbusinessloc.NPWPBoardofDirectors);
 			waitForObj(10000);
-			uploadFile(foreigbusinessloc.Upload8);
+			uploadFile(foreigbusinessloc.OtherFiles);
 			waitForObj(10000);
 		     
 			click(foreigbusinessloc.Agree1);

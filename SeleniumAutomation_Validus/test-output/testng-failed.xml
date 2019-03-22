@@ -5,19 +5,19 @@
     <listener class-name="com.baseClasses.Listener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browserName" value="firefox"/>
-    <parameter name="TestcaseNo" value="1"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="TestcaseNo" value="11"/>
     <classes>
-      <class name="com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity">
+      <class name="com.testScripts_Indonesia.Funding_Sme">
         <methods>
           <include name="setUpSuiteDetails"/>
-          <include name="f" invocation-numbers="0"/>
           <include name="afterSuite"/>
           <include name="captureDesc"/>
           <include name="BeforeClass"/>
+          <include name="f" invocation-numbers="0"/>
           <include name="afterClass"/>
         </methods>
-      </class> <!-- com.testScripts_Indonesia.Batumbu_Investor_ForeignBusiness_Entity -->
+      </class> <!-- com.testScripts_Indonesia.Funding_Sme -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

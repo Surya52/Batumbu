@@ -56,14 +56,14 @@ public class ForeignBusiness_Entity_Locators {
 			  public By  ShareholderCitizenShip =By.xpath("(//select[@name='shareholder_citizenship[]'])[2]");
 			  public By  Sharecontact =By.xpath("(//input[@name='shareholder_contact_no[]'])[2]");
 			
-			  public By Upload1 =By.xpath("(//button[contains(text(),'Pilih file')])[8]");
-			  public By Upload2 =By.xpath("(//button[contains(text(),'Pilih file')])[9]");
-			  public By Upload3 =By.xpath("(//button[contains(text(),'Pilih file')])[10]");
-			  public By Upload4 =By.xpath("(//button[contains(text(),'Pilih file')])[11]");
-			  public By Upload5 =By.xpath("(//button[contains(text(),'Pilih file')])[12]"); 
-			  public By Upload6 =By.xpath("(//button[contains(text(),'Pilih file')])[13]");
-			  public By Upload7	=By.xpath("(//button[contains(text(),'Pilih file')])[14]");
-			  public By Upload8 =By.xpath("(//button[contains(text(),'Pilih file')])[15]");
+			  public By KTP 			=By.xpath("(//button[contains(text(),'Pilih file')])[8]");
+			  public By SIM  			=By.xpath("(//button[contains(text(),'Pilih file')])[9]");
+			  public By FrontPassport   =By.xpath("(//button[contains(text(),'Pilih file')])[10]");
+			  public By RearPassport   =By.xpath("(//button[contains(text(),'Pilih file')])[11]");
+			  public By Certificateofestablishment =By.xpath("(//button[contains(text(),'Pilih file')])[12]"); 
+			  public By DeedofEstablishment    =By.xpath("(//button[contains(text(),'Pilih file')])[13]");
+			  public By NPWPBoardofDirectors	 =By.xpath("(//button[contains(text(),'Pilih file')])[14]");
+			  public By OtherFiles =By.xpath("(//button[contains(text(),'Pilih file')])[15]");
 			  
 			  public By Agree1  =By.xpath("//label[@for='agree20']");
 			  public By Agree2  =By.xpath("//label[@for='agree21']");

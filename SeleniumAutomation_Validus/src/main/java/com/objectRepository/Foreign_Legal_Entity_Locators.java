@@ -6,25 +6,25 @@ public class Foreign_Legal_Entity_Locators {
  
 	
 	
-	public By ComapanyName =By.xpath("(//input[@id='CompanyName'])[4]");
-	public By Greetings =By.xpath("(//select[@id='Salutation'])[4]");
+	 public By ComapanyName =By.xpath("(//input[@id='CompanyName'])[4]");
+   	 public By Greetings =By.xpath("(//select[@id='Salutation'])[4]");
 	
-	public By DeedNumber =By.xpath("(//input[@id='CompanyRegistrationNumber'])[3]");
+	 public By DeedNumber =By.xpath("(//input[@id='CompanyRegistrationNumber'])[3]");
 	
-	public By firstName2 = By.xpath("(//input[@id='FirstName'])[4]");
-    public By MiddleName = By.xpath("(//input[@id='MiddleName'])[4]");
-	public By lastname = By.xpath("(//input[@id='FamilyName'])[4]");
-	public By companyAddress2 = By.xpath("(//input[@id='CompanyAddress'])[3]");
+	 public By firstName2 = By.xpath("(//input[@id='FirstName'])[4]");
+     public By MiddleName = By.xpath("(//input[@id='MiddleName'])[4]");
+	 public By lastname = By.xpath("(//input[@id='FamilyName'])[4]");
+	 public By companyAddress2 = By.xpath("(//input[@id='CompanyAddress'])[3]");
 	
 	
-	public By DateooDeed= By.xpath("(//input[@class='DeedOfEstablishment'])[4]");
+	 public By DateooDeed= By.xpath("(//input[@class='DeedOfEstablishment'])[4]");
 	
-	public By industryDescription = By.xpath("//input[@id='IndustryDescription1']");
+	 public By industryDescription = By.xpath("//input[@id='IndustryDescription1']");
 	 public By postalCode2 = By.xpath("(//input[@id='CompanyZipCode'])[3]");
 	 public By IdNumber				= By.xpath("(//input[@id='NRICNumber'])[6]");
-	 public By SimNumber			= By.xpath("(//input[@id='SIMNumber'])[3]");
-	 public By PassPortNUm			= By.xpath("(//input[@id='PassportNumber'])[3]");
-	 public By NRICPassportNumber2 = By.xpath("(//input[@id='NRICNumber'])[6]");
+	 public By SimNumber			= By.xpath("(//input[@id='SIMNumber'])[4]");
+	 public By PassPortNUm			= By.xpath("(//input[@id='PassportNumber'])[4]");
+	 public By NRICPassportNumber2 = By.xpath("(//input[@id='NRICNumber'])[4]");
 	 
 	 public By Nationality2 = By.xpath("(//select[@id='Nationality'])[4]");
 	 
@@ -133,6 +133,8 @@ public class Foreign_Legal_Entity_Locators {
 		    public By Mailverification = By.xpath("//div[@id='00NN00000039a62_ileinner']");
 			public By foreignlegalentity= By.xpath("//label[contains(text(),'Badan hukum asing ')]");
 			public By Otp =By.xpath("//div[@id='00NN00000039a68_ileinner']");	
+			 public By LeaveButtton		= By.xpath("//input[@value='Cancel']/following::input[@value='Leave']");
+			   
 			public By LoginKiPlatform		=By.xpath("//a[text()='login ke Platform Batumbu.']");
 			
 	

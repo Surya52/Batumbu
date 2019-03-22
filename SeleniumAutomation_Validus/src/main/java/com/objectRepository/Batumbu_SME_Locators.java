@@ -194,7 +194,7 @@ public class Batumbu_SME_Locators {
     	public By InvoiceAgree5			  = By.xpath("//label[@for='agree5']");
     	public By SmeFinalSubmit		  = By.xpath("//button[text()='Kirim']");
     	public By masuk 				  = By.xpath("//button[contains(text(),'Masuk')]");
-    	
+    	public By SMELogOut				  = By.xpath("//a[text()='Keluar']");
     	
     	
     	  	public By AdminMail = By.xpath("//input[@placeholder='Email']");
@@ -239,7 +239,10 @@ public class Batumbu_SME_Locators {
     	    public By LoanDocuments	=	By.xpath("//a[contains(text(),'Loan Documents')]");
     	    public By NoOfDocs      =By.xpath("//select[@name='example1_length']");
     	    
-    	
+//--------------------------------------Funding SME From Admin Portal-------------------------------------------------------
+    	    
+    	    public By Platform					= By.xpath("//a[text()=' PLATFORM']");
+    	    public By AllLiveFacilities			= By.xpath("//*[text()=' Penawaran Pinjaman saat ini']");
     	
 	    
 	    

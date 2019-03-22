@@ -131,8 +131,8 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 			click(loc);
 			 Thread.sleep(7000);
 			Screen s=new Screen();
-			 s.type("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\text.png", "C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\dummy-pdf_2.pdf");
-			s.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenButton.png");
+			 s.type("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\text.png", "C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\dummy-pdf_2.pdf");
+			s.click("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenButton.png");
 			Thread.sleep(5000);
 		}catch(Exception e) {
 			System.out.println("Unable to upload the file");
@@ -166,7 +166,7 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 		try {
 			
 			Thread.sleep(2000);
-			screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+			screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
 			waitForObj(2000);
 			switchwindow(1);
 			ThreadLocalWebdriver.getDriver().get("https://test.salesforce.com/");
@@ -186,7 +186,7 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 	public void gmailOTP() throws Throwable {
 		
 		try {
-		screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+		screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
 		Thread.sleep(5000);
 		try {
 			switchwindow(2);
@@ -207,9 +207,9 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 		click(foreignentityloc.emailNext);
 		Thread.sleep(4000);
 		 
-		screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\mailmenu.png");
+		screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\mailmenu.png");
 		 
-		screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\MailIcon.png");
+		screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\MailIcon.png");
 		Thread.sleep(4000);
 		 set(foreignentityloc.gmailSearch, "noreply@salesforce.com");
     	click(foreignentityloc.gmailSearchButton);
@@ -245,7 +245,7 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 	  	}
  		 
 		
-		screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\DeleteMaiil.png");
+		screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\DeleteMaiil.png");
 		 Thread.sleep(2000);
 		 ThreadLocalWebdriver.getDriver().close();
 		Thread.sleep(4000);
@@ -262,42 +262,7 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 		click(By.xpath("//input[@id='save']"));
 		waitForObj(10000);
 		
-
-		
-		/*
-		ThreadLocalWebdriver.getDriver().get("http://mail.saisasolutions.com");
-		set(salesforcelocators.saisaUsername, "nithin.bolishetti@saisasolutions.com");
-		set(salesforcelocators.saisaPassword, "Ni9hin@27");
-		click(salesforcelocators.mailLogin);
-		Thread.sleep(30000);
-		switchframe(ThreadLocalWebdriver.getDriver().findElement(By.name("UserEmail")));
-		String time = ThreadLocalWebdriver.getDriver()
-				.findElement(By.xpath("//*[@id=\"ctl00_Split_GP_MPH_HyperGrid1_0\"]/td[3]/div[1]")).getText();
-		System.out.println(time);
-		String[] mins = time.split(":");
-
-		click(By.xpath("(//div[@class=\"multiline line1 shrink\"])[1]"));
-		// driver.findElement(By.xpath("(//div[@class=\"multiline line1
-		// shrink\"])[1]")).click();
-		Thread.sleep(5000);
-		// driver.switchTo().defaultContent();
-		switchframe(ThreadLocalWebdriver.getDriver().findElement(By.id("ctl00_Split_Frame_ContentFrame")));
-		String otp = null;
-		String str1 = ThreadLocalWebdriver.getDriver()
-				.findElement(By.xpath("//*[@id='ctl00_MPH_UpdatePanel2']/pre")).getText();
-
-		// System.out.println(str1);
-		String[] s1 = str1.split("\n");
-		System.out.println(s1.length);
-		for (int i = 0; i < s1.length; i++) {
-			if (s1[i].contains("Verification")) {
-				String code = s1[i];
-				System.out.println(code);
-				String[] ec = code.split(":");
-				otp = ec[1];
-				System.out.println("code ::" + otp);
-			}
-		}*/
+ 
 		pdfResultReport.addStepDetails("Gmail Salesforce OTP ", "User should able to take salesforce OTP successfully",
 				"Successfully user is able to take the salesforce otp from the gmail" + " ", "Pass", "Y");
 	} catch (Exception e3) {
@@ -315,23 +280,7 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 					 String str=	ThreadLocalWebdriver.getDriver().findElement(foreignentityloc.UnRegisterText).getText();
 				System.out.println("Total No Of Usrs Are"+"  "+str);
 					 
-					/* if(str.contains("aApN00")){
-					System.out.println("First User applicatoin NUmber is"+str);
-					ThreadLocalWebdriver.getDriver().findElement(By.xpath("//a[contains(text(),'"+str+"')]")).click();
-				       
-				}
-				String  optMsg=text(foreignentityloc.Otp);
-				
-				switchwindow(0);
-				JavascriptExecutor js = (JavascriptExecutor) ThreadLocalWebdriver.getDriver();
-				WebElement el = ThreadLocalWebdriver.getDriver().findElement(By.cssSelector("input[id=otpEntered]"));
-				js.executeScript("arguments[0].value = arguments[1];", el, optMsg);
-				click(foreignentityloc.continueInvestor);
-				Thread.sleep(7000);
-		      	ThreadLocalWebdriver.getDriver().close();
-		     	Thread.sleep(5000);
-				
-			 	*/	
+					 	
 				   String[] s2 = str.split("\n");
 					System.out.println("No Of Unregistered Users Are"+s2.length);
 				
@@ -348,8 +297,7 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 					    	 waitForObj(5000);
 							String mailtext1 = ThreadLocalWebdriver.getDriver().findElement(foreignentityloc.Maildidtext).getText();
 							waitForObj(5000);  
-					        //if(mailtext1==pdfResultReport.testData.get("EmailIDInvestor")){
-							
+					  		
 					        	if(mailtext1.equals(pdfResultReport.testData.get("EmailIDInvestor"))){
 					        	Thread.sleep(3000);
 								String optMsg = ThreadLocalWebdriver.getDriver().findElement(By.xpath("//*[@id='00NN00000039a68_ileinner']")).getText();
@@ -373,110 +321,22 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 		 						
 								waitForObj(3000);
 								click(foreignentityloc.Mailverification);
-								
-							 	waitForObj(1000);
-								Screen S= new  Screen();
-								 S.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\LeaveButton.png");
-								Thread.sleep(20000);
 								 swtichToChildTab();	
-								click(foreignentityloc.LoginKiPlatform);
+								click(foreignentityloc.LeaveButtton);
+								Thread.sleep(20000);
+								 click(foreignentityloc.LoginKiPlatform);
 								 break;	
-																	        	
-					        }else {
+							 
+					        	}else {
 					        
-					        Screen back= new Screen();
-					        back.click("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\BackBUtton.png");
+					        	screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\BackBUtton.png");
+					         
 					        }
-							
-					
-						}
+							 	}
 					}
 				
 				
-				 /*
-				
-						String code1 = s2[j];
-						System.out.println(code1);
-						
-						String[] abd = code1.split(" ");
-						String otp2 = abd[1];
-						System.out.println("Code ::" +otp2);
-						ThreadLocalWebdriver.getDriver().findElement(By.xpath("//a[contains(text(),'"+otp2+"')]")).click();
-					break;
-					}
-				}
-				*//*click(salesforcelocators.unregisteredUsers);
-				click(salesforcelocators.go);*/
-			//	if (ThreadLocalWebdriver.getDriver().findElement(By.xpath("//img[@class='last']")).isDisplayed()) {
-			//		click(salesforcelocators.lastButton);
-			//		Thread.sleep(10000);
-			//	} else {
-			//		System.out.println();
-			//	}
-				 				/*
-				List<WebElement> list = ThreadLocalWebdriver.getDriver()
-						.findElements(By.xpath("//*[@class='x-grid3-cell-inner x-grid3-col-Name']/a/span"));
-				System.out.println(list.size());
-				for (int i = 0; i < list.size(); i++) {
-					if(i==2) {
-						System.out.println("//*[@id='" + list.get(i).getText() +"']");
-						ThreadLocalWebdriver.getDriver()
-						.findElement(By.xpath("//*[@id='" + list.get(i).getText() +"']")).click();
-					}
-					if (i == list.size() - 1) {
-						System.out.println(list.get(i).getText());
-						System.out.println("//*[@id='" + list.get(i).getText() + "_Name']/a/span");
-				
-						Actions a = new Actions(ThreadLocalWebdriver.getDriver());
-			        	a.keyDown(Keys.CONTROL).sendKeys(Keys.END).build().perform();
-						waitForObj(2000);
-						a.keyDown(Keys.CONTROL).sendKeys(Keys.END).build().perform();
-						waitForObj(2000);
-						a.sendKeys(Keys.PAGE_DOWN).build().perform();
-						Thread.sleep(3000);
-						a.moveToElement(ThreadLocalWebdriver.getDriver().findElement(By.xpath("//*[@id='" + list.get(i).getText() + "_Name']/a/span")));
-						a.click(ThreadLocalWebdriver.getDriver().findElement(By.xpath("//*[@id='" + list.get(i).getText() + "_Name']/a/span")));
-						JavascriptExecutor js = (JavascriptExecutor) ThreadLocalWebdriver.getDriver();
-						WebElement el = ThreadLocalWebdriver.getDriver().findElement(By.xpath("//*[@id='" + list.get(i).getText() + "_Name']/a/span"));
-						js.executeScript("arguments[0].value = arguments[1];", "click");
-						a.moveToElement(ThreadLocalWebdriver.getDriver().findElement(By.xpath("//*[@id='"+list.get(i).getText()+"_Name']/a/span"))).build().perform();
-						a.click(ThreadLocalWebdriver.getDriver().findElement(By.xpath("//*[@id='" + list.get(i).getText() + "_Name']/a/span"))).build().perform();
-						switchwindow(2);
-						//ThreadLocalWebdriver.getDriver().findElement(By.xpath("//*[@id='"+list.get(i).getText()+"_Name']/a/span")).click();
-						//a.sendKeys(Keys.ARROW_DOWN).build().perform();
-					}
-				}
-				
-				 * try { list.get(list.size()-1).click(); } catch (Exception e) { // TODO
-				 * Auto-generated catch block e.printStackTrace(); }
-				 */
-				/*
-				 * Set<String> otpStr=driver.getWindowHandles(); System.out.println(otpStr);
-				 * Object[] otpo=otpStr.toArray(); System.out.println(otpo.length);
-				 * driver.switchTo().window(otpo[1].toString());
-				 */
- 
-			/*	WebElement otpTxtBox = ThreadLocalWebdriver.getDriver().findElement(salesforcelocators.otpinvestor);
-				Actions builder = new Actions(ThreadLocalWebdriver.getDriver());
-				Actions seriesOfActions = builder.moveToElement(otpTxtBox).click().sendKeys(otpTxtBox, optMsg);
-				seriesOfActions.perform();*/
-
-				/*List<WebElement> lists = ThreadLocalWebdriver.getDriver()
-						.findElements(By.xpath("//*[@class='x-grid3-cell-inner x-grid3-col-Name']/a/span"));
-				System.out.println(lists.size());
-				Actions a = new Actions(ThreadLocalWebdriver.getDriver());
-				for (int i = 0; i < lists.size(); i++) {
-					if (i == lists.size() - 1) {
-						System.out.println(lists.get(i).getText());
-						System.out.println("//*[@id='" + lists.get(i).getText() + "_Name']/a/span");
-						//Actions a = new Actions(ThreadLocalWebdriver.getDriver());
-						a.keyDown(Keys.CONTROL).sendKeys(Keys.END).build().perform();
-						waitForObj(2000);
-						a.sendKeys(Keys.ARROW_DOWN).build().perform();
-						Thread.sleep(2000);
-						ThreadLocalWebdriver.getDriver()
-								.findElement(By.xpath("//*[@id='" + list.get(i).getText() + "_Name']/a/span")).click();*/
-				  pdfResultReport.addStepDetails("Salesforce mobile and email verification", "User should able to verify mobile and email successfully",
+			 				  pdfResultReport.addStepDetails("Salesforce mobile and email verification", "User should able to verify mobile and email successfully",
 							"Successfully verified the email and mobile from the salesforce application" + " ", "Pass", "Y");
 				} 
 		catch (Exception e3) {
@@ -486,6 +346,8 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 					"Unable to verify the email and mobile from salesforce application" + e3.getMessage(), "Fail", "N");
 		}			
 			}
+
+	
 	public void navigateToForeignlegalentity() throws Exception {
 		try {
 			waitForElement(foreignentityloc.foreignlegalentity, 30);
@@ -516,14 +378,14 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 			set(foreignentityloc.postalCode2, pdfResultReport.testData.get("Postal code"));
 			select(foreignentityloc.Nationality2, pdfResultReport.testData.get("Nationality") );
 			select(foreignentityloc.SICCCode, pdfResultReport.testData.get("SICC (Industry) Code"));
-		  	 set(foreignentityloc.SimNumber, pdfResultReport.testData.get("Net Profit loss previous year"));
+		  	set(foreignentityloc.SimNumber, pdfResultReport.testData.get("Net Profit loss previous year"));
 		  	set(foreignentityloc.PassPortNUm, pdfResultReport.testData.get("Net Profit loss previous year"));
 		  	 waitForObj(2000);
 			
-			set(foreignentityloc.primaryConatctNo2, pdfResultReport.testData.get("PrimaryCntctNo"));
+			js_type(foreignentityloc.primaryConatctNo2, pdfResultReport.testData.get("PrimaryCntctNo"),"Main Contact NUmber");
 			set(foreignentityloc.designationInv2, pdfResultReport.testData.get("Designation"));
-		    set(foreignentityloc.Networthprevious, pdfResultReport.testData.get("Net Profit loss previous year"));
-			set(foreignentityloc.NetwothCurrentyear, pdfResultReport.testData.get("Net Profit loss previous year"));
+		    set(foreignentityloc.Networthprevious, pdfResultReport.testData.get("Annual Revenue latest year"));
+			set(foreignentityloc.NetwothCurrentyear, pdfResultReport.testData.get("Annual Revenue latest year"));
 		
 			 
 			set(foreignentityloc.ManagementName, pdfResultReport.testData.get("SearchText"));
@@ -596,11 +458,11 @@ public class Batumbu_Investor_Foreign_Legal_Entity_Components extends BaseClass_
 public void batumbuAdminApproval() throws Throwable{
 		
 		try{
-			ThreadLocalWebdriver.getDriver().manage().timeouts().implicitlyWait(3000,  TimeUnit.SECONDS);
-	 	 	screenclick("C:\\Users\\user\\Desktop\\FRAME WORK\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
+			 
+			screenclick("C:\\Users\\user\\git\\Batumbu\\SeleniumAutomation_Validus\\Media\\OpenTab.png");
 
 	 	 	switchwindow(2);
-			ThreadLocalWebdriver.getDriver().get("http://149.129.218.139/BatumbuAdmin/public/");
+	 	  	ThreadLocalWebdriver.getDriver().get("http://149.129.218.139/BatumbuAdmin/public/");
 			
 			set(foreignentityloc.AdminMail, "portaladmin@batumbu.id");
 			set(foreignentityloc.AdminPassword, "Admin123");
@@ -694,14 +556,7 @@ public void batumbuAdminApproval() throws Throwable{
  	  
 	
 }		}	
-		
-	
-	
-	
-	
-	
-	
-	
+	 
 public void salesforceApproval() throws Throwable {
 		
 		try {
@@ -824,7 +679,7 @@ public void salesforcefund() throws Exception {
 		set(foreignentityloc.Amounttransaction, "100000.00");
 		waitForObj(2000);
 		click(foreignentityloc.savefund);
-	 
+	 Thread.sleep(7000);
 	
 	pdfResultReport.addStepDetails("salesforcefund", "User should able to fund the application successfully",
 			"Successfully funded to the application" + " ", "Pass", "Y");
